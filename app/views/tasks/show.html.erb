@@ -1,0 +1,12 @@
+<h1><%= @task.title %></h1>
+<div>
+  <ul>
+    <li><%= @task.details %></li>
+  </ul>
+</div>
+
+<%= link_to "Delete", delete_path(@task),
+  method: :delete,
+    data: { confirm: "Are you sure?" }, class: 'btn btn-warning btn-sm' %>
+
+<%= link_to '<< Back', tasks_path, class: 'btn btn-primary btn-sm' %>
